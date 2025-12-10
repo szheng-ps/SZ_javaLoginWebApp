@@ -25,10 +25,7 @@ public class Customer
 
     public Customer()
     {
-        this.ID = ID;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.favoriteMeal = favoriteMeal;
+
     }
 
     public int getID() {

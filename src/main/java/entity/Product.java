@@ -1,4 +1,4 @@
-/*package entity;
+package entity;
 
 public class Product {
 
@@ -9,40 +9,67 @@ public class Product {
     private double product_size;
     private double product_price;
 
-    public Customer(int ID, String firstName, String lastName, String favoriteMeal)
+    public Product(int product_id, String product_name, String product_description, String product_color, double product_size, double product_price)
     {
-        this.ID = ID;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.favoriteMeal = favoriteMeal;
+        this.product_id = product_id;
+        this.product_name = product_name;
+        this.product_description = product_description;
+        this.product_color = product_color;
+        this.product_size = product_size;
+        this.product_price = product_price;
     }
 
-    public Customer(int ID, String firstName)
+    public Product()
     {
-        this.ID = ID;
-        this.firstName = firstName;
+
     }
 
     public int getID() {
-        return ID;
+        return product_id;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getName() {
+        return product_name;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getDescription() {
+        return product_description;
     }
 
-    public String getFavoriteMeal() {
-        return favoriteMeal;
+    public String getColor() {
+        return product_color;
+    }
+
+    public double getSize() {
+        return product_size;
+    }
+    public double getPrice() {
+        return product_price;
+    }
+
+    public void setName(String product_name) {
+        this.product_name = product_name;
+    }
+
+    public void setDescription(String product_description) {
+        this.product_description = product_description;
+    }
+
+    public void setColor(String product_color) {
+        this.product_color = product_color;
+    }
+
+    public void setSize(double product_size) {
+        this.product_size = product_size;
+    }
+
+    public void setPrice(double product_price) {
+        this.product_price = product_price;
     }
 
     @Override
     public String toString() {
-        return "Customer{" + "ID=" + ID + ", firstName=" + firstName + ", lastName=" + lastName + ", favoriteMeal=" + favoriteMeal + '}';
+        return "Customer{" + "ID=" + product_id + ", Name=" + product_name + ", Description=" + product_description + ", Color=" + product_color + ", Size=" + product_size + ", Price=" + product_price + '}';
     }
 
 }
-*/
