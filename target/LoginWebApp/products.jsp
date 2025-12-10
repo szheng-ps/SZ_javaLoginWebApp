@@ -68,5 +68,7 @@
     <version>3.0.1</version>
 </dependency>
 
+
+<p><a href="index.jsp">Back to home</a></p>
 </body>
 </html>
