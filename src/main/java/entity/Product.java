@@ -24,7 +24,7 @@ public class Product {
 
     }
 
-    public int getID() {
+    public int getPID() {
         return product_id;
     }
 

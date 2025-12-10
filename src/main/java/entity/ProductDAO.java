@@ -77,7 +77,7 @@ public class ProductDAO implements DAO<Product> {
         try {
             String sql = "INSERT INTO HD_Product(Product_ID, Product_Name, Product_Description, Product_Color, Product_Size, Product_Price) VALUES (?, ?, ?, ?, ?, ?)";
             PreparedStatement stmt = db.getPreparedStatement(sql);
-            stmt.setInt(1, product.getID());
+            stmt.setInt(1, product.getPID());
             stmt.setString(2, product.getName());
             stmt.setString(3, product.getDescription());
             stmt.setString(4, product.getColor());
@@ -107,7 +107,7 @@ public class ProductDAO implements DAO<Product> {
             stmt.setString(3, product.getColor());
             stmt.setDouble(4, product.getSize());
             stmt.setDouble(5, product.getPrice());
-            stmt.setInt(6, product.getID());
+            stmt.setInt(6, product.getPID());
             int rowsUpdated = stmt.executeUpdate();
             if (rowsUpdated > 0) {
                 System.out.println("An existing product was updated successfully!");
@@ -127,7 +127,7 @@ public class ProductDAO implements DAO<Product> {
         try {
             String sql = "DELETE FROM HD_Product WHERE Product_ID = ?";
             PreparedStatement stmt = db.getPreparedStatement(sql);
-            stmt.setInt(1, product.getID());
+            stmt.setInt(1, product.getPID());
             int rowsDeleted = stmt.executeUpdate();
             if (rowsDeleted > 0) {
                 System.out.println("A product was deleted successfully!");
