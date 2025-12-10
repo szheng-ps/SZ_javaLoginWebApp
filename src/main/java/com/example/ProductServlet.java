@@ -51,7 +51,7 @@ public class ProductServlet extends HttpServlet {
         double price = Double.parseDouble(request.getParameter("price"));
 
         if (name != null && description != null && color != null && size > 0 && price > 0
-                && !name.isBlank()) {
+                && !name.isBlank() && description.isBlank() && color.isBlank()) {
 
             Product p = new Product();
             p.setName(name);

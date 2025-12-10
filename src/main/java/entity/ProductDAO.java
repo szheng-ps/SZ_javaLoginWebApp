@@ -19,17 +19,17 @@ public class ProductDAO implements DAO<Product> {
 
     /**
      * Get a single product entity as a product object
-     * @param pid
+     * @param product_id
      * @return
      */
     @Override
-    public Optional<Product> get(int pid) {
+    public Optional<Product> get(int product_id) {
         DB db = DB.getInstance();
         ResultSet rs = null;
         try {
             String sql = "SELECT * FROM HD_Product WHERE Product_ID = ?";
             PreparedStatement stmt = db.getPreparedStatement(sql);
-            stmt.setInt(1, pid);
+            stmt.setInt(1, product_id);
             rs = stmt.executeQuery();
             Product product = null;
             while (rs.next()) {
@@ -77,12 +77,12 @@ public class ProductDAO implements DAO<Product> {
         try {
             String sql = "INSERT INTO HD_Product(Product_ID, Product_Name, Product_Description, Product_Color, Product_Size, Product_Price) VALUES (?, ?, ?, ?, ?, ?)";
             PreparedStatement stmt = db.getPreparedStatement(sql);
-            stmt.setInt(1, product.getPID());
-            stmt.setString(2, product.getName());
-            stmt.setString(3, product.getDescription());
-            stmt.setString(4, product.getColor());
-            stmt.setDouble(5, product.getSize());
-            stmt.setDouble(6, product.getPrice());
+            stmt.setInt(1, product.getProduct_id());
+            stmt.setString(2, product.getProduct_name());
+            stmt.setString(3, product.getProduct_description());
+            stmt.setString(4, product.getProduct_color());
+            stmt.setDouble(5, product.getProduct_size());
+            stmt.setDouble(6, product.getProduct_price());
             int rowInserted = stmt.executeUpdate();
             if (rowInserted > 0) {
                 System.out.println("A new product was inserted successfully!");
@@ -102,12 +102,12 @@ public class ProductDAO implements DAO<Product> {
         try {
             String sql = "UPDATE HD_Product SET Product_Name=?, Product_Description=?, Product_Color=?, Product_Size=?, Product_Price=? WHERE Product_ID=?";
             PreparedStatement stmt = db.getPreparedStatement(sql);
-            stmt.setString(1, product.getName());
-            stmt.setString(2, product.getDescription());
-            stmt.setString(3, product.getColor());
-            stmt.setDouble(4, product.getSize());
-            stmt.setDouble(5, product.getPrice());
-            stmt.setInt(6, product.getPID());
+            stmt.setString(1, product.getProduct_name());
+            stmt.setString(2, product.getProduct_description());
+            stmt.setString(3, product.getProduct_color());
+            stmt.setDouble(4, product.getProduct_size());
+            stmt.setDouble(5, product.getProduct_price());
+            stmt.setInt(6, product.getProduct_id());
             int rowsUpdated = stmt.executeUpdate();
             if (rowsUpdated > 0) {
                 System.out.println("An existing product was updated successfully!");
@@ -127,7 +127,7 @@ public class ProductDAO implements DAO<Product> {
         try {
             String sql = "DELETE FROM HD_Product WHERE Product_ID = ?";
             PreparedStatement stmt = db.getPreparedStatement(sql);
-            stmt.setInt(1, product.getPID());
+            stmt.setInt(1, product.getProduct_id());
             int rowsDeleted = stmt.executeUpdate();
             if (rowsDeleted > 0) {
                 System.out.println("A product was deleted successfully!");

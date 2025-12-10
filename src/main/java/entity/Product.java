@@ -24,26 +24,26 @@ public class Product {
 
     }
 
-    public int getPID() {
+    public int getProduct_id() {
         return product_id;
     }
 
-    public String getName() {
+    public String getProduct_name() {
         return product_name;
     }
 
-    public String getDescription() {
+    public String getProduct_description() {
         return product_description;
     }
 
-    public String getColor() {
+    public String getProduct_color() {
         return product_color;
     }
 
-    public double getSize() {
+    public double getProduct_size() {
         return product_size;
     }
-    public double getPrice() {
+    public double getProduct_price() {
         return product_price;
     }
 
@@ -69,7 +69,7 @@ public class Product {
 
     @Override
     public String toString() {
-        return "Customer{" + "ID=" + product_id + ", Name=" + product_name + ", Description=" + product_description + ", Color=" + product_color + ", Size=" + product_size + ", Price=" + product_price + '}';
+        return "Customer{" + "PID=" + product_id + ", Name=" + product_name + ", Description=" + product_description + ", Color=" + product_color + ", Size=" + product_size + ", Price=" + product_price + '}';
     }
 
 }
