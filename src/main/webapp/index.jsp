@@ -19,7 +19,15 @@
 
 <a href="customers.jsp">View Customer Information</a></p>
 
-<a href="products.jsp">View Products</a></p>
+<a href="products.jsp">View Product Information</a></p>
+
+<a href="product_create.jsp">Create Products</a></p>
+
+<a href="product_read.jsp">View Products</a></p>
+
+<a href="product_update.jsp">Update Products</a></p>
+
+<a href="product_delete.jsp">Delete Products</a></p>
 
 <a href="logout">Logout</a>
 
