@@ -1,3 +1,4 @@
+
 <%
     // 'session' is an implicit JSP variable (type HttpSession)
     if (session == null || session.getAttribute("user") == null) {
@@ -19,7 +20,12 @@
 
 <a href="customers.jsp">View Customer Information</a></p>
 
-<a href="products.jsp">View Products</a></p>
+<a href="products.jsp">View Product Information</a></p>
+<br>
+
+<a href="product_create.jsp">Create Products</a></p>
+
+<a href="product_read.jsp">View Products</a></p>
 
 <a href="logout">Logout</a>
 
