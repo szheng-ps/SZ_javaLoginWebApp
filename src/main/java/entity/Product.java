@@ -24,6 +24,7 @@ public class Product {
 
     }
 
+    // Setters and getters
     public int getProduct_id() {
         return product_id;
     }
@@ -51,29 +52,29 @@ public class Product {
         this.product_id = product_id;
     }
 
-    public void setName(String product_name) {
+    public void setProduct_name(String product_name) {
         this.product_name = product_name;
     }
 
-    public void setDescription(String product_description) {
+    public void setProduct_description(String product_description) {
         this.product_description = product_description;
     }
 
-    public void setColor(String product_color) {
+    public void setProduct_color(String product_color) {
         this.product_color = product_color;
     }
 
-    public void setSize(double product_size) {
+    public void setProduct_size(double product_size) {
         this.product_size = product_size;
     }
 
-    public void setPrice(double product_price) {
+    public void setProduct_price(double product_price) {
         this.product_price = product_price;
     }
 
     @Override
     public String toString() {
-        return "Customer{" + "PID=" + product_id + ", Name=" + product_name + ", Description=" + product_description + ", Color=" + product_color + ", Size=" + product_size + ", Price=" + product_price + '}';
+        return "Product{" + "product_id=" + product_id + ", product_name=" + product_name + ", product_description=" + product_description + ", product_color=" + product_color + ", product_size=" + product_size + ", product_price=" + product_price + '}';
     }
 
 }
